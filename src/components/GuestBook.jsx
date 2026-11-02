@@ -30,7 +30,7 @@ export default function GuestBook() {
 
   const fetchMessages = async () => {
     const { data, error } = await supabase
-      .from("wedding_wishes")
+      .from("my_wedding_wishes")
       .select("*")
       .order("id", { ascending: false });
 
@@ -77,7 +77,7 @@ export default function GuestBook() {
     };
 
     // Insert into Supabase
-    const { error } = await supabase.from("wedding_wishes").insert([newMessage]);
+    const { error } = await supabase.from("my_wedding_wishes").insert([newMessage]);
 
     if (error) {
       console.error("Error posting wish:", error);
@@ -92,7 +92,7 @@ export default function GuestBook() {
   
   const handleDelete = async (id) => {
     if (confirm("तुम्हाला हा संदेश खरोखर डिलीट करायचा आहे का?")) {
-      const { error } = await supabase.from("wedding_wishes").delete().eq("id", id);
+      const { error } = await supabase.from("my_wedding_wishes").delete().eq("id", id);
       if (error) {
         alert("डिलिट करताना अडचण आली");
         console.error("Error deleting message:", error);
@@ -183,7 +183,7 @@ export default function GuestBook() {
               rows="3"
               value={wishes}
               onChange={(e) => setWishes(e.target.value)}
-              placeholder="सागर आणि प्रियंका यांच्यासाठी तुमच्या शुभेच्छा लिहा..."
+              placeholder="प्रियंका आणि सागर यांच्यासाठी तुमच्या शुभेच्छा लिहा..."
               className="w-full bg-cream-100 border border-gold-500/40 rounded-xl p-3 text-sm text-rani-900 focus:outline-none focus:border-rani-600"
             />
           </div>
