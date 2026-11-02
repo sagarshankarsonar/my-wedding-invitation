@@ -5,7 +5,7 @@ import { Sun, Heart, CalendarPlus } from "lucide-react";
 
 export default function Events() {
   const downloadIcs = (event) => {
-    const icsData = `BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nSUMMARY:${event.title} - Sagar & Priyanka\nDESCRIPTION:${event.description}\nLOCATION:${weddingDetails.venue.name}, ${weddingDetails.venue.address}\nDTSTART:20261125T060000Z\nDTEND:20261125T120000Z\nEND:VEVENT\nEND:VCALENDAR`;
+    const icsData = `BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nSUMMARY:${event.title} - Priyanka & Sagar\nDESCRIPTION:${event.description}\nLOCATION:${weddingDetails.venue.name}, ${weddingDetails.venue.address}\nDTSTART:20261125T060000Z\nDTEND:20261125T120000Z\nEND:VEVENT\nEND:VCALENDAR`;
     const blob = new Blob([icsData], { type: "text/calendar;charset=utf-8" });
     const url = window.URL.createObjectURL(blob);
     const link = document.createElement("a");
