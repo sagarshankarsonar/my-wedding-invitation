@@ -14,8 +14,8 @@ export default function RsvpModal({ isOpen, onClose }) {
     e.preventDefault();
     if (!name.trim()) return;
 
-    // व्हॉट्सॲप नंबर (8855009016) वर मेसेज पाठवण्यासाठी मजकूर तयार करणे
-    const phoneNumber = "918855009016"; // भारताचा कोड 91 सह
+    // व्हॉट्सॲप नंबर (8237814143) वर मेसेज पाठवण्यासाठी मजकूर तयार करणे
+    const phoneNumber = "918237814143"; // भारताचा कोड 91 सह
     const message = `✨ *नवीन RSVP (उपस्थिती नोंदणी)* ✨\n\n👤 *नाव:* ${name}\n🎯 *कार्यक्रम:* ${eventChoice}\n👥 *पाहुण्यांची संख्या:* ${guestsCount}\n\nमाझी उपस्थिती निश्चित आहे! 🙏`;
 
     // व्हॉट्सॲप युआरएल तयार करणे
@@ -50,7 +50,7 @@ export default function RsvpModal({ isOpen, onClose }) {
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
             <h3 className="text-2xl font-serif text-rani-950 font-extrabold text-center mb-1">
-              उपस्थिती नोंदणी (RSVP) 💌
+              उपस्थिती नोंदणी 💌
             </h3>
             <p className="text-xs text-center text-rani-900 font-medium mb-4">कृपया आपल्या उपस्थितीची माहिती द्या</p>
 
