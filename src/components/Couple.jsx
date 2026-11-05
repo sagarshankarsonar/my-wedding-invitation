@@ -10,7 +10,7 @@ export default function Couple() {
     <section className="py-20 px-6 max-w-5xl mx-auto text-center bg-cream-50 text-rani-900">
       <p className="text-gold-600 font-script text-3xl mb-2">दोन पवित्र आत्म्यांची मिलनगाथा ❤️</p>
       <h2 className="text-3xl md:text-5xl font-serif text-rani-gradient font-bold mb-12">
-        वर आणि वधू परिचय 💐
+       वधू आणि वर परिचय 💐
       </h2>
 
       <div className="grid md:grid-cols-2 gap-12 items-center">
